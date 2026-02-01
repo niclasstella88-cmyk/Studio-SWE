@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio SWE | TikTok Automation för Tillväxt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav" id="navbar">
+        <div class="nav__container">
+            <a href="#" class="nav__logo"><span>Studio</span><span style="color:#0066FF">SWE</span></a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#workflow" class="nav__link">Metod</a></li>
+                <li><a href="#pricing" class="nav__link">Priser</a></li>
+                <li><a href="#generator" class="nav__link nav__link--cta">Testa Generatorn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero__container">
+            <div class="hero__content" style="text-align:center; padding: 120px 20px;">
+                <span class="badge badge--glow">Nyhet 2026</span>
+                <h1 class="hero__title" style="font-size:3rem; margin:20px 0;">
+                    Automatisera din <span style="color:#0066FF">TikTok-närvaro</span>
+                </h1>
+                <p style="color:#A0A0B0; font-size:1.2rem; max-width:600px; margin:0 auto 40px;">
+                    Vi bygger kompletta content-system som genererar leads dygnet runt.
+                </p>
+                <a href="#generator" class="btn btn--primary btn--lg">Skapa ditt första content →</a>
+                
+                <div style="display:flex; justify-content:center; gap:50px; margin-top:60px; border-top:1px solid rgba(255,255,255,0.1); padding-top:40px;">
+                    <div><strong style="font-size:2rem; color:#0066FF">150</strong><br><span style="color:#A0A0B0; font-size:0.9rem;">Kunder</span></div>
+                    <div><strong style="font-size:2rem; color:#0066FF">2.5M</strong><br><span style="color:#A0A0B0; font-size:0.9rem;">Visningar</span></div>
+                    <div><strong style="font-size:2rem; color:#0066FF">100%</strong><br><span style="color:#A0A0B0; font-size:0.9rem;">Automatiskt</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--generator" id="generator" style="background:#12121A; padding:80px 20px;">
+        <div class="section__container" style="max-width:800px; margin:0 auto;">
+            <h2 style="text-align:center; font-size:2.5rem; margin-bottom:40px;">Skapa viralt content på 30 sekunder</h2>
+            
+            <div style="display:flex; gap:10px; margin-bottom:30px;">
+                <input type="text" id="topic" placeholder="Skriv ett ämne t.ex. 'AI-verktyg'" style="flex:1; padding:20px; border-radius:12px; border:none; background:#1E1E2E; color:white; font-size:1.1rem;">
+                <button id="generateBtn" class="btn btn--primary" style="padding:0 30px; font-size:1.2rem;">→</button>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;">
+                <button class="tag" onclick="document.getElementById('topic').value='AI-verktyg 2026'; document.getElementById('generateBtn').click();">AI-verktyg 2026</button>
+                <button class="tag" onclick="document.getElementById('topic').value='Passive income'; document.getElementById('generateBtn').click();">Passive income</button>
+                <button class="tag" onclick="document.getElementById('topic').value='Startup tips'; document.getElementById('generateBtn').click();">Startup tips</button>
+            </div>
+
+            <div id="outputArea" style="background:#0A0A0F; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:40px; min-height:300px;">
+                <p style="color:#6B6B7B; text-align:center;">Ditt content visas här...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" style="padding:80px 20px;">
+        <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px;">
+            
+            <div style="background:#12121A; border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:40px;">
+                <h3 style="font-size:1.5rem; margin-bottom:10px;">Starter</h3>
+                <p style="color:#A0A0B0; margin-bottom:20px;">För solelprofiler</p>
+                <div style="font-size:3rem; font-weight:800; color:#0066FF; margin-bottom:5px;">15 000 <span style="font-size:1rem; color:#A0A0B0;">kr</span></div>
+                <p style="color:#A0A0B0; margin-bottom:30px;">+ 2 500 kr/mån</p>
+                <ul style="list-style:none; padding:0; margin-bottom:30px; line-height:2;">
+                    <li>✓ 1 plattform (TikTok)</li>
+                    <li>✓ 3 videos/vecka</li>
+                    <li>✓ Basanalys</li>
+                </ul>
+                <button class="btn btn--secondary btn--block" onclick="alert('Kontakta oss på info@studioswe.se för att komma igång med Starter!')">Välj Starter</button>
+            </div>
+
+            <div style="background:linear-gradient(135deg, #12121A 0%, rgba(0,102,255,0.05) 100%); border:2px solid #0066FF; border-radius:20px; padding:40px; position:relative; transform:scale(1.05);">
+                <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:linear-gradient(90deg, #0066FF, #00D4FF); color:white; padding:5px 15px; border-radius:20px; font-size:0.75rem; font-weight:bold;">MEST POPULÄR</span>
+                <h3 style="font-size:1.5rem; margin-bottom:10px;">Professional</h3>
+                <p style="color:#A0A0B0; margin-bottom:20px;">För tillväxt</p>
+                <div style="font-size:3rem; font-weight:800; color:#0066FF; margin-bottom:5px;">20 000 <span style="font-size:1rem; color:#A0A0B0;">kr</span></div>
+                <p style="color:#A0A0B0; margin-bottom:30px;">+ 4 000 kr/mån</p>
+                <ul style="list-style:none; padding:0; margin-bottom:30px; line-height:2;">
+                    <li>✓ 3 plattformar</li>
+                    <li>✓ Dagligen content</li>
+                    <li>✓ CRM + Lead-scoring</li>
+                </ul>
+                <button class="btn btn--primary btn--block" onclick="alert('Bra val! Maila oss på info@studioswe.se för att starta Professional-paketet.')">Välj Professional</button>
+            </div>
+
+            <div style="background:#12121A; border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:40px;">
+                <h3 style="font-size:1.5rem; margin-bottom:10px;">Enterprise</h3>
+                <p style="color:#A0A0B0; margin-bottom:20px;">Fullservice</p>
+                <div style="font-size:3rem; font-weight:800; color:#0066FF; margin-bottom:5px;">25 000 <span style="font-size:1rem; color:#A0A0B0;">kr</span></div>
+                <p style="color:#A0A0B0; margin-bottom:30px;">+ 6 000 kr/mån</p>
+                <ul style="list-style:none; padding:0; margin-bottom:30px; line-height:2;">
+                    <li>✓ Obegränsade plattformar</li>
+                    <li>✓ Egen account manager</li>
+                    <li>✓ 24/7 support</li>
+                </ul>
+                <button class="btn btn--secondary btn--block" onclick="alert('Kontakta vår säljare på info@studioswe.se för Enterprise-lösningar.')">Kontakta sälj</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="background:#12121A; padding:40px 20px; text-align:center; border-top:1px solid rgba(255,255,255,0.1);">
+        <h2 style="margin-bottom:10px;">Studio SWE</h2>
+        <p style="color:#A0A0B0;">Sveriges ledande TikTok-automation</p>
+        <p style="color:#6B6B7B; margin-top:30px; font-size:0.9rem;">© 2026 Studio SWE. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
